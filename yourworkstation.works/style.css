@@ -1,0 +1,38 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: #39603D;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./image/microsoft-365-FHhbHW4vFxc-unsplash.jpg");
+  opacity: 0.8;
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+#work{
+  background-color:#DADED4;
+}
+#about{
+  color: #DADED4;
+}
+#team{
+  background-color: #39603D;
+  color: #FFE1E1;
+}
+
+#pricing{
+  background-color: #39603D;
+}
+
+#contact{
+  background-color:#DADED4;
+}
