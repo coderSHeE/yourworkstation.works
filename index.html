@@ -1,432 +1,815 @@
 <!DOCTYPE html>
-<html>
-<title>Welcome to YourWorkstation</title>
-<link rel="icon" type="image/x-icon" href="./workstation logo.jpeg">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+<html lang="en">
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-  background-color: #39603D;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourWorkstation</title>
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("./microsoft-365-FHhbHW4vFxc-unsplash.jpg");
-  opacity: 0.8;
-  min-height: 100%;
-}
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/workstation logo.jpeg" type="image/svg+xml">
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
-#work{
-  background-color:#DADED4;
-}
-#about{
-  color: #DADED4;
-}
-#team{
-  background-color: #39603D;
-  color: #FFE1E1;
-}
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./style.css">
 
-#pricing{
-  background-color: #39603D;
-}
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+    rel="stylesheet">
+</head>
 
-#contact{
-  background-color:#DADED4;
-}
+<body id="top">
 
-</style>
-<body>
+  <!-- 
+    - #HEADER
+  -->
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">YourWorkstation</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>LOCATIONS</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WHY US</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#">
+        <h1 class="logo">YourWorkstation</h1>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">YourWorkstation</a>
+
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-navbar-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-navbar-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#services" class="navbar-link" data-navbar-link>Locations </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#features" class="navbar-link" data-navbar-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-navbar-link>Recent Events </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-navbar-link>What they say ?</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn">
+        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+
+        <span >Book Your Free Trial </span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  </header>
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small" ><strong style="color: #F1F3F8; ">Spaces and Innovation <br>is what Inspires us!</strong> </span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium" style="color: #DADED4;">Create Collaborate Connect</span><br>
-    <span class="w3-large" style="color: #00334E; height: 1rem;"><strong> Your Peace station is YourWorkstation</strong></span>
-    <p><a href="https://forms.gle/QcUCcZquqXQ663s78" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Book your Free Trial Now!</a></p>
-  </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-</header>
 
-<!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center" style="color: #FFE1E1;">About YourWorkstation</h3>
-  <p class="w3-center w3-large">Visit Us And Find Why We Are Diffrent <br>
-  What we are providing diffrent</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Member's Referral Program </p><hr>
-      <p>Let join more people to our community with the help of Member's Referral Program  Refer and get 20% off on your monthly subscription </p>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">YourWorkStation in Jaipur is not just another co-working space, it's a hub of innovation, collaboration, and community-building.</p>
+
+            <h2 class="h2 hero-title">Spaces and Innovation
+              is what Inspires us!</h2>
+
+            <p class="hero-text">
+              we're passionate about driving innovation and creativity through dynamic spaces that inspire and motivate. Join our community and discover the power of collaborative co-working in Jaipur.
+            </p>
+
+            <button class="btn">Enquiry</button>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./images/yourWorkstation.png" width="694" height="200" loading="lazy" alt="hero-banner"
+              class="w-100 banner-animation">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./images/whyus.png" width="700" height="532" loading="lazy" alt="about banner"
+              class="w-100 banner-animation">
+          </figure>
+
+          <div class="about-content">
+
+            <h2 class="h2 section-title underline">Why Our Co-working </h2>
+
+            <p class="about-text">
+              Our passionate team searches for unique and captivating spaces to elevate your work experience. Come and experience the YourWorkstation difference where inspiration meets innovation!
+              <ul>
+                <li>
+                  <span style="color: red;">1. Member's Referral Program </span>
+                </li>
+                <li>
+                  <span style="color: red;">2. Happy Hours</span>
+                </li>
+                <li>
+                  <span style="color: red;">3. Pet Friendly | Toddler Friendly</span>
+                </li>
+                <li>
+                  <span style="color: red;">4.  Community</span>
+                </li>
+              </ul>
+            </p>
+            <br>
+
+            <p class="about-text">
+              <span style="color: blue;">Join the YourWorkstation community today</span> and unlock a world of possibilities! Our community is made up of like-minded individuals who are driven to succeed and passionate about what they do.
+            </p>
+
+            <ul class="stats-list">
+
+              <li class="stats-card">
+                <p class="h3 stats-title">100+</p>
+
+                <p class="stats-text">Satisfied Clients</p>
+              </li>
+
+              <li class="stats-card">
+                <p class="h3 stats-title">3+ </p>
+
+                <p class="stats-text">Locations</p>
+              </li>
+
+              <li class="stats-card">
+                <p class="h3 stats-title">100+ </p>
+
+                <p class="stats-text">Events Completed</p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="services">
+        <div class="container">
+
+          <h2 class="h2 section-title underline">Our Locations</h2>
+          <h4 style="color: #FFAE42; text-align: center";> Unique places | visit us and find us why we are different</h4>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 title">TGH</h3>
+               
+
+                <p class="text">
+                  Monday off | timming 9:00 AM to 12:00 PM<br>
+                  C-scheme Jaipur<br>
+                  <strong>Working in nature can provide a refreshing and inspiring work environment, benefiting both mental and physical health.</strong>
+                </p>
+
+                <button class="card-btn" aria-label="Show More">
+                  <ion-icon name="send-outline"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 title">Malviye Nagar </h3>
+
+                <p class="text">
+                  <strong>Coming Soon </strong>>
+                </p>
+
+                <button class="card-btn" aria-label="Show More">
+                  <ion-icon name="send-outline"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 title">Mansrover </h3>
+
+                <p class="text">
+                 <strong>Coming Soon </strong>
+                </p>
+
+                <button class="card-btn" aria-label="Show More">
+                  <ion-icon name="send-outline"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features" id="features">
+        <div class="container">
+
+          <h2 class="h2 section-title underline">Our Features</h2>
+
+          <ul class="features-list">
+
+            <li>
+              <div class="features-card">
+
+                <div class="icon">
+                  <ion-icon name="person-add-outline"></ion-icon>
+                </div>
+
+                <div class="content">
+                  <h3 class="h3 title">Member's Referral Program</h3>
+
+                  <p class="text">
+                    Let join more people to our community with the help of Member's Referral Program Refer and get 20% off on your monthly subscription                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <div class="icon">
+                  <ion-icon name="happy-outline"></ion-icon>
+                </div>
+
+                <div class="content">
+                  <h3 class="h3 title">Happy Hours</h3>
+
+                  <p class="text">
+                    Every week we will organise one DayCare Day! We care about You !                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <figure class="features-banner">
+            <img src="./images/feature.png" width="369" height="318" loading="lazy" alt="Features Banner"
+              class="w-100 banner-animation">
+          </figure>
+
+          <ul class="features-list">
+
+            <li>
+              <div class="features-card">
+
+                <div class="icon">
+                  <ion-icon name="rocket-outline"></ion-icon>
+                </div>
+
+                <div class="content">
+                  <h3 class="h3 title">Pet Friendly | Toddler Friendly</h3>
+
+                  <p class="text">
+                    Still worry about your child or pet , let them too enjoy the services of YourWorkstation our team will provide care for your Toddler or Pet                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <div class="icon">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+
+                <div class="content">
+                  <h3 class="h3 title">Community-building</h3>
+
+
+                  <p class="text">
+                    We are Providing the best space with the best price , support Community share how you can provide value to YourWorkstation and get discount based on your skill and value you provide in our community                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title underline">Our Recent Events & News</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="banner">
+                  <a href="#">
+                    <img src="./images/Red Modern Live Podcast Instagram Post.png" width="750" height="350" loading="lazy"
+                      alt="Vestibulum massa arcu, consectetu pellentesque scelerisque." class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="content">
+
+                  <h3 class="h3 title">
+                    <a href="https://www.instagram.com/p/CpiNm_APmdj/">
+                      Want to stay ahead of the game in the world of freelancing?
+                    </a>
+                  </h3>
+
+                  <p class="text">
+                  Join us live at our co-working space in Jaipur and discover the latest trends and strategies that are changing the game!
+                  </p>
+
+                  <div class="meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-03-07">12 March, 2023</time>
+                    </div>
+
+                    <button class="comment" aria-label="Comment">
+                      <ion-icon name="chatbubble-outline"></ion-icon>
+
+                      <data value="15">15</data>
+                    </button>
+
+                    <button class="share" aria-label="Share">
+                      <ion-icon name="share-social-outline"></ion-icon>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="banner">
+                  <a href="#">
+                    <img src="./images/Screenshot 2023-03-11 144500.png" width="750" height="350" loading="lazy"
+                      alt="Quisque egestas iaculis felis eget placerat ut pulvinar mi." class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="content">
+
+                  <h3 class="h3 title">
+                    <a href="https://www.instagram.com/p/Co6XS5fvtl2/">
+                      Unleash your inner artist and immerse yourself with Natural Colors 
+                    </a>
+                  </h3>
+
+                  <p class="text">
+                    Join us for an exciting Natural Color Art Workshop organized by <span style="color: red;">Jagruti tiwary</span> at our co-working space! 🎨🌟Don't miss out on this incredible experience!
+                  </p>
+
+                  <div class="meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-03-07">26 February , 2023</time>
+                    </div>
+
+                    <button class="comment" aria-label="Comment">
+                      <ion-icon name="chatbubble-outline"></ion-icon>
+
+                      <data value="15">10</data>
+                    </button>
+
+                    <button class="share" aria-label="Share">
+                      <ion-icon name="share-social-outline"></ion-icon>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+             <!--- <div class="blog-card">
+
+                <figure class="banner">
+                  <a href="#">
+                    <img src="./assets/images/blog-3.jpg" width="750" height="350" loading="lazy"
+                      alt="Fusce sem ligula, imperdiet sed nisi sit amet, euismod posuere." class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="content">
+
+                  <h3 class="h3 title">
+                    <a href="#">
+                      Fusce sem ligula, imperdiet sed nisi sit amet, euismod posuere.
+                    </a>
+                  </h3>
+
+                  <p class="text">
+                    Sed quis sagittis velit. Aliquam velit eros, bibendum ut massa et, consequat laoreet erat nam ac
+                    imperdiet.
+                  </p>
+
+                  <div class="meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-03-07">7 March, 2022</time>
+                    </div>
+
+                    <button class="comment" aria-label="Comment">
+                      <ion-icon name="chatbubble-outline"></ion-icon>
+
+                      <data value="15">15</data>
+                    </button>
+
+                    <button class="share" aria-label="Share">
+                      <ion-icon name="share-social-outline"></ion-icon>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="banner">
+                  <a href="#">
+                    <img src="./assets/images/blog-4.jpg" width="750" height="350" loading="lazy"
+                      alt="Donec feugiat mollis nisi in dignissim. Morbi sollicitudin quis." class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="content">
+
+                  <h3 class="h3 title">
+                    <a href="#">
+                      Donec feugiat mollis nisi in dignissim. Morbi sollicitudin quis.
+                    </a>
+                  </h3>
+
+                  <p class="text">
+                    Sed quis sagittis velit. Aliquam velit eros, bibendum ut massa et, consequat laoreet erat nam ac
+                    imperdiet.
+                  </p>
+
+                  <div class="meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="2022-03-07">7 March, 2022</time>
+                    </div>
+
+                    <button class="comment" aria-label="Comment">
+                      <ion-icon name="chatbubble-outline"></ion-icon>
+
+                      <data value="15">15</data>
+                    </button>
+
+                    <button class="share" aria-label="Share">
+                      <ion-icon name="share-social-outline"></ion-icon>
+                    </button>
+
+                  </div>
+
+                </div>-->
+
+              </div>
+            </li>
+             <h1 style="text-align: center;">Want to Host Something we have your back !... </h1>
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">YourWorkstation</a>
+
+          <p class="text">
+            Looking for a workspace that allows you to connect with nature and be productive at the same time? Look no further than our co-working space!
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.linkedin.com/company/yourworkstation/?viewAsMember=true" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/jaipur_workstation/" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Locations</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Features</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Events </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Members'Referral Program</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Happy Hours</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pet Friendly & Toddler Friendly</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Rich Community</a>
+          </li>
+
+          <!--<li>
+            <a href="#" class="footer-link"></a>
+          </li>-->
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Other links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ</a>
+          </li>
+
+          <!--<li>
+            <a href="#" class="footer-link">Portfolio</a>
+          </li>-->
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Support</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+
+            <div class="footer-item-icon">
+              <ion-icon name="call"></ion-icon>
+            </div>
+
+            <div>
+              <a href="tel:+2484214313" class="footer-item-link">+91 7877498530</a>
+              <a href="tel:+2486871365" class="footer-item-link">+91 98877 09405 </a>
+            </div>
+
+          </li>
+
+          <li class="footer-item">
+
+            <div class="footer-item-icon">
+              <ion-icon name="mail"></ion-icon>
+            </div>
+
+            <div>
+              <a href="mailto:info@desinic.com" class="footer-item-link">yourworkstaion@gmail.com</a>
+              <!--<a href="mailto:help@desinic.com" class="footer-item-link">help@desinic.com</a>-->
+            </div>
+
+          </li>
+
+          <li class="footer-item">
+
+            <div class="footer-item-icon">
+              <ion-icon name="location"></ion-icon>
+            </div>
+
+            <address class="footer-item-link">
+              Jaipur Rajasthan 
+            </address>
+
+          </li>
+
+        </ul>
+
+      </div>
     </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Happy Hours</p><hr>
-      <p>Every week we will organise one DayCare Day! We care about You ! </p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Pet Friendly | Toddler Friendly</p><hr>
-      <p>still worry about your child or pet , let them too enjoy the services of YourWorkstation our team will provide care for your Toddler or Pet </p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Community</p><hr>
-      <p> We are Providing the best space with the best price , support Community share how you can provide value to YourWorkstation and get discount based on your skill and value you provide in our community</p>
-    </div>
-  </div>
-</div>
 
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px ">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3 style="color: #39603D;"><b>What is YourWorkstation</b></h3>
-      <p style="color: #39603D;"><b>YourWorkstation is world's first co-working supply chain startup originated in Jaipur Rajasthan India our mission 
-        is to brings you the best co-working space in PAN India We are providing a space in such minimal cost So everyone in india can enjoy the Environment of Inspiration,
-        our team works to find the best and unique co-working spaces We care About your Creativity and productivity. 
-        visit us and find <br><span style="color: brown;"> we are different .</span></b>
-        <br>
-       <p style="color: #39603D;"><b>Our Mission to provide a place where ispiration takes place new ideas brings the joy </b> </p>
-        <h5 style="color: brown;"><b>join our community today</b> </h5>
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; 2023 <a href="#" class="copyright">YourWorkStation</a> All Right Reserved
       </p>
-      <p><a href="https://forms.gle/QcUCcZquqXQ663s78" class="w3-button w3-black"><i class="fa fa-th"> </i>Join our Community</a></p>
     </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="./microsoft-365-iDbvfTsgO8Y-unsplash.jpg" alt="Buildings" width="700" height="385">
-    </div>
-  </div>
-</div>
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">Our Places</h3>
-  <p class="w3-center w3-large">Unique places | visit us and find us <span style="color: #F1B24A;">why we are different</span></p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./tgh logo.jpeg" alt="John" style="width:100%" >
-        <div class="w3-container">
-          <h3>TGH</h3>
-          <p class="w3-opacity">Monday off | timming 9:00 AM to 12:00 PM </p>
-          <p>C-scheme Jaipur</p>
-          <p><button class="w3-button w3-light-grey w3-block"><a href="https://forms.gle/QcUCcZquqXQ663s78"><i class="fa fa-envelope"></i> Send Enquiry</a></button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./workstation logo.jpeg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Comming soon </h3>
-          <p class="w3-opacity">Malviye Nagar Jaipur</p>
-          <p>Comming soon stay tuned</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Send Enquiry</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./workstation logo.jpeg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Comming soon</h3>
-          <p class="w3-opacity">Vaishali Nagar Jaipur </p>
-          <p>Comming soon stay tuned </p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> send Enquiry</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./workstation logo.jpeg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Comming soon</h3>
-          <p class="w3-opacity">Comming soon</p>
-          <p>comming soon stay tuned </p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Send Enquiry</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" style="color: #F1B24A;">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">2+</span>
-    <br>Partners
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">2+</span>
-    <br>Community support
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">30+</span>
-    <br>seat Arrangement 
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Community Members 
-  </div>
-</div>
-
-<!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large"><b style="color: #00334E;">Become a Member of YourWorkstation community </b></p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="./etienne-girardet-EP6_VZhzXM8-unsplash.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="./RGHWORK.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="./eve.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="./eve2.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="./microsoft-365-FHhbHW4vFxc-unsplash.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="./microsoft-365-iDbvfTsgO8Y-unsplash.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="./mika-baumeister-LaqL8nxiacc-unsplash.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="./t1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!--Skills Section
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div>
-  </div>
-</div>-->
-
-<!-- Pricing Section -->
-<div class="w3-container w3-center " style="padding:128px 16px" id="pricing">
-  <h3>MEMBERSHIPS</h3>
-  <p class="w3-large">Choose a pricing plan that fits your needs.</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>fREE COFFEE</b> <strong>SPEED INTERNET</strong> </li>
-        <li class="w3-padding-16"><b>FREE EVENT PASSES</li>
-        <li class="w3-padding-16"><b>NETWORKING OPORTUNITY</li>
-        <li class="w3-padding-16"><b>INDOOR SPACE </b> OUTDOOR SPACE, FREE MEETING SPACE </li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">270/-</h2>
-          <span class="w3-opacity">DAY PASS</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large"><a href="https://forms.gle/HisNpWQEm6GxFfLD7">Send Enquiry</a></button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
-        <li class="w3-padding-16"><b>FREE COFFEE</b> HIGH SPEED INTERNET </li>
-        <li class="w3-padding-16"><b>FREE EVENT PASS</b> DAYCARE BENIFITS</li>
-        <li class="w3-padding-16"><b>CAFETERIA</b> SUPPORT </li>
-        <li class="w3-padding-16"><b>CHANCE TO CONTACT INTERNATIONAL </b> COMMUNITY  FREE MEETING SPACE </li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">4000/-</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large"><a href="https://forms.gle/HisNpWQEm6GxFfLD7">Send Enquiry</a></button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>comming soon</b></li>
-        <li class="w3-padding-16"><b>comming soon</b></li>
-        <li class="w3-padding-16"><b>comming soon</b></li>
-        <li class="w3-padding-16"><b></b> </li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">comming soon</h2>
-          <span class="w3-opacity">comming soon</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Send Enquiry</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <!--<h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">-->
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Jaipur Rajasthan</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 7877498530</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: yourworkstaion@gmail.com
-    </p>
-  
-    <br>
-   <!----<form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>-->
-    <!-- Image of location/map -
-    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-  </div>
-</div>
--->
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Copywrite 2023 YourWorkstation</p>
-</footer>
-
-<script type="text/javascript">
-  window._mfq = window._mfq || [];
-  (function() {
-    var mf = document.createElement("script");
-    mf.type = "text/javascript"; mf.defer = true;
-    mf.src = "//cdn.mouseflow.com/projects/57b5d16c-1248-496d-bccc-59a29639fb39.js";
-    document.getElementsByTagName("head")[0].appendChild(mf);
-  })();
-</script>
- 
-<script>
-  
-//Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+  </footer>
 
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="main.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
